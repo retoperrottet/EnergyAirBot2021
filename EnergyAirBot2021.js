@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Energy Air 2021 Game Bot
-// @version      1
+// @version      1.3
 // @description  Win tickets for the Energy Air 2021 automatically
 // @author       retoou
 // @match        *game.energy.ch/*
@@ -71,23 +71,23 @@ const questions = {
     "Du hast die erste Hürde geschafft.": "Jetzt Tickets für das Energy Air gewinnen!"
 }
 
-function titleIs (title, selector = 'h1') {
-	return document.getElementsByTagName(selector)[1].textContent === title
+function titleIs(title, selector = 'h1') {
+    return document.getElementsByTagName(selector)[1].textContent === title
 }
 
-function currentQuestion () {
-	if ($('h3.question-text').html() != null){
-		return $('h3.question-text').html().toUpperCase()
-	}
-}
-
-function nextQuestion () {
-    window.clearTimeout(setTimeout);
-    setTimeout(makeAction, Math.floor((Math.random()+1)* (intTimeOut) + 600))
-    $('button#next-question').trigger('click')
+function currentQuestion() {
+    if ($('h3.question-text').html() != null) {
+        return $('h3.question-text').html().toUpperCase()
     }
+}
 
-function answerQuestion () {
+function nextQuestion() {
+    window.clearTimeout(setTimeout);
+    setTimeout(makeAction, Math.floor((Math.random() + 1) * (intTimeOut) + 600))
+    $('button#next-question').trigger('click')
+}
+
+function answerQuestion() {
     window.clearTimeout(setTimeout);
     let curr = currentQuestion()
     console.log(curr, questions[curr])
@@ -96,48 +96,49 @@ function answerQuestion () {
             $(el).children('input').trigger('click')
         }
     })
-    setTimeout(nextQuestion, Math.floor((Math.random()+1)* (intTimeOut) + 600))
+    setTimeout(nextQuestion, Math.floor((Math.random() + 1) * (intTimeOut) + 600))
 }
 
-function makeAction () {
+function makeAction() {
     window.clearTimeout(setTimeout);
-	if (document.getElementsByTagName('h1')[1] != null){
-		if (titleIs('Hinter welchem Logo verstecken sich die Tickets?') ||titleIs("Hinter welchem Symbol versteckt sich der Gutschein?")) {
-			console.log('STEP: Memory')
-			var star = Math.floor(Math.random() * 12) + 2;
-			document.getElementsByTagName('img') [star].click();
-			setTimeout(makeAction, Math.floor((Math.random()+1)* (intTimeOut) + 1000))
-		} else if ($('h1:contains("verloren")')) {
-            	if ($('p:contains("Starte das Spiel neu.")').length) {
-                    setTimeout(makeAction, Math.floor((Math.random()+1)* (intTimeOut) + 600))
-                    $('button:contains("rneut"):contains("Neustarten")').trigger('click')
-                    console.clear()
-                }
+    if (document.getElementsByTagName('h1')[1] != null) {
+        if (titleIs('Hinter welchem Logo verstecken sich die Tickets?') || titleIs("Hinter welchem Symbol versteckt sich der Gutschein?")) {
+            console.log('STEP: Memory')
+            var star = Math.floor(Math.random() * 12) + 2;
+            document.getElementsByTagName('img')[star].click();
+            setTimeout(makeAction, Math.floor((Math.random() + 1) * (intTimeOut) + 1000))
+        } else if ($('h1:contains("verloren")')) {
+            if ($('p:contains("Starte das Spiel neu.")').length) {
+                setTimeout(makeAction, Math.floor((Math.random() + 1) * (intTimeOut) + 600))
+                $('button:contains("Erneut versuchen")').trigger('click')
+                $('button:contains("Neustarten")').trigger('click')
+                console.clear()
+            }
             else {
-                setTimeout(makeAction, Math.floor((Math.random()+1)* (intTimeOut) + 600))
+                setTimeout(makeAction, Math.floor((Math.random() + 1) * (intTimeOut) + 600))
                 document.getElementById('lose').click()
                 console.clear()
             }
-		}
-	}
-    else if ($('button:contains("Jetzt Tickets für das Energy Air gewinnen!")').length) {
-			if(strProfit == "Tally"){
-				$('button:contains("Geschenkgutscheine von Tally Weijl im Wert von 50.- gewinnen.")').trigger('click')
-			} else {
-				$('button:contains("Jetzt Tickets für das Energy Air gewinnen!")').trigger('click')
-			}
-			setTimeout(makeAction, Math.floor((Math.random()+1) * (intTimeOut) + 600))
-	}
-    else if ($('button:contains("Game starten")').length) {
-			$('button:contains("Game starten")').trigger('click')
-			setTimeout(makeAction, Math.floor((Math.random()+1)* (intTimeOut) + 600))
+        }
     }
-	else {
-		answerQuestion()
-	}
+    else if ($('button:contains("Jetzt Tickets für das Energy Air gewinnen!")').length) {
+        if (strProfit == "Tally") {
+            $('button:contains("Geschenkgutscheine von Tally Weijl im Wert von 50.- gewinnen.")').trigger('click')
+        } else {
+            $('button:contains("Jetzt Tickets für das Energy Air gewinnen!")').trigger('click')
+        }
+        setTimeout(makeAction, Math.floor((Math.random() + 1) * (intTimeOut) + 600))
+    }
+    else if ($('button:contains("Game starten")').length) {
+        $('button:contains("Game starten")').trigger('click')
+        setTimeout(makeAction, Math.floor((Math.random() + 1) * (intTimeOut) + 600))
+    }
+    else {
+        answerQuestion()
+    }
 }
 
-(function() {
+(function () {
     'use strict';
 
     console.log('starting...')
