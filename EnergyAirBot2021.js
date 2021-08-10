@@ -110,7 +110,7 @@ function makeAction () {
 		} else if ($('h1:contains("verloren")')) {
             	if ($('p:contains("Starte das Spiel neu.")').length) {
                     setTimeout(makeAction, Math.floor((Math.random()+1)* (intTimeOut) + 600))
-                    $('button:contains("Erneut versuchen"):contains("Neustarten")').trigger('click')
+                    $('button:contains("rneut"):contains("Neustarten")').trigger('click')
                     console.clear()
                 }
             else {
