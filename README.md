@@ -5,8 +5,7 @@ Just to let you know I will work on the bot if it isn't working anymore and upda
 ## Credits:
 - Special Thanks to [@alext2000](https://github.com/alext2000/) for the 2021 update  
 - Special Thanks to [@ggmanugg](https://github.com/ggmanugg/) for the basic code / logic
-I made some minor changes that you for example can change the timeout between the questions or win TALLY WEIJL coupons.
-Besides that I did some bugfixes.
+I made some minor changes, added some parameters and did some bugfixes.
 ## How to use:
 Make sure to run your browser in full screen, otherwise it might not work
 - Download the Tampermonkey Addon for your browser: https://www.tampermonkey.net
