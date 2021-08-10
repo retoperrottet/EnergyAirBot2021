@@ -3,8 +3,8 @@
 ⚠️ **If the Bot isn't working** Please stay calm, nrj seems to be working on the game from time to time to prevent Bots!
 Just to let you know I will work on the bot if it isn't working anymore and update the repository as soon as there is a working version again.
 ## Credits:
-- Special Thanks to [@alext2000] for the 2021 update  
-- Special Thanks to [@ggmanugg] for the basic code / logic
+- Special Thanks to [@alext2000](https://github.com/alext2000/) for the 2021 update  
+- Special Thanks to [@ggmanugg](https://github.com/ggmanugg/) for the basic code / logic
 I made some minor changes that you for example can change the timeout between the questions or win TALLY WEIJL coupons.
 Besides that I did some bugfixes.
 ## How to use:
