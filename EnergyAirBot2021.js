@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Energy Air 2021 Game Bot
-// @version      1.3
+// @version      1.6
 // @description  Win tickets for the Energy Air 2021 automatically
 // @author       retoou
 // @match        *game.energy.ch/*
@@ -134,7 +134,13 @@ function makeAction() {
         setTimeout(makeAction, Math.floor((Math.random() + 1) * (intTimeOut) + 600))
     }
     else {
-        answerQuestion()
+        try {
+            answerQuestion()
+        } catch(e){
+            console.log(e);
+            location.reload();
+            console.log("Refreshed Page");
+        }
     }
 }
 
