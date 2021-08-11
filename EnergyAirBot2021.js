@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Energy Air 2021 Game Bot
-// @version      1.6
+// @version      1.7
 // @description  Win tickets for the Energy Air 2021 automatically
 // @author       retoou
 // @match        *game.energy.ch/*
@@ -34,7 +34,7 @@ const strProfit = "Air"; // Replace the Text to "Tally" or "Air", make sure to l
 const questions = {
     "IN WIE VIELEN LÄNDERN IST DAS KLEIDERGESCHÄFT TALLY WEIJL VERTRETEN?": "In 39 Ländern",
     "WO KANNST DU, UNTER ANDEREM, ENERGY AIR TICKETS GEWINNEN?": "Am Sender bei Radio Energy",
-    "IN WELCHER LOCATION FINDET DAS ENERGY AIR 2021 UNTER FREIEM HIMMEL STATT?": "Stade de Suisse Wankdorf",
+    "IN WELCHER LOCATION FINDET DAS ENERGY AIR 2021 UNTER FREIEM HIMMEL STATT?": "Stadion Wankdorf",
     "WIE HEISST DIE AKTUELLE KAMPAGNE GEGEN HASS IM INTERNET, WELCHE SWISSCOM MIT ENERGY LANCIERT HAT?": "Mute the hate",
     "WER WAR DER ALLERERSTE ACT IN DER GESCHICHTE DES ENERGY AIR?": "Bastian Baker",
     "WER WAR DER ÜBERRASCHUNGSACT AM ENERGY AIR 2018?": "Lo &amp; Leduc",
