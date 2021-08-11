@@ -6,6 +6,7 @@ Just to let you know I will work on the bot if it isn't working anymore and upda
 - Special Thanks to [@alext2000](https://github.com/alextruong2600/) for the 2021 update  
 - Special Thanks to [@ggmanugg](https://github.com/ggmanugg/) for the basic code / logic.
 I only made some minor changes, added some parameters and did some bugfixes.
+- Thanks to [@EuropeanVirtual](https://github.com/EuropeanVirtual) for a question update.
 ## How to use:
 Make sure to run your browser in full screen, otherwise it might not work
 - Download the Tampermonkey Addon for your browser: https://www.tampermonkey.net
