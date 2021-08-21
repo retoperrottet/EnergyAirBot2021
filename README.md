@@ -1,3 +1,5 @@
+⚠️ **Nrj added a reCAPTCHA.** If you still want to use the Bot try to add a browser extension who solves those.  
+I made the bot for educational use only, i wont update it anymore from now on!
 # Energy Air bot 2021
 ⚠️ **The Bot is made for educational use only** Use on your own risk!  
 ⚠️ **If the Bot isn't working** Please stay calm, nrj seems to be working on the game from time to time to prevent Bots!
